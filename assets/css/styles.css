@@ -1,0 +1,89 @@
+@font-face {
+    font-family: 'Pressura';
+    src: url('../fonts/GT-Pressura-Mono-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+   font-family: 'Pressura', monospace;
+    color: #3a3a3a;
+    background-color: #F7D1DC;
+}
+
+/* Layout */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 40px;
+}
+
+/* Left column */
+.left-column {
+    flex: 1 1 200px;
+    padding: 20px;
+}
+
+.name a {
+    font-family: 'Pressura', monospace;
+    text-decoration: none;
+    color: #3a3a3a;
+    font-size: 24px;
+}
+
+.nav-links {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.nav-links a {
+    font-size: 16px;
+    font-family: 'Pressura', monospace;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1em;
+    text-transform: none;
+    color: #3a3a3a;
+    display: block;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    color: #efa6bb;
+}
+
+/* Right column */
+.right-column {
+    flex: 2 1 600px;
+  padding: 20px;
+}
+
+.media-item img {
+    width: 100%;
+    max-width: 100%;
+}
+
+
+@media (max-width: 800px) {
+    .left-column,
+    .right-column {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .container {
+        padding: 20px;
+    }
+        .left-column {
+        margin-bottom: 30px;
+    }
+}
