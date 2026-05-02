@@ -1,89 +1,88 @@
 @font-face {
-    font-family: 'Pressura';
-    src: url('../fonts/GT-Pressura-Mono-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+    font-family: 'Pica';
+    src: url('../fonts/Pica-10.ttf') format('truetype');
 }
 
+@font-face {
+    font-family: 'Stempel';
+    src: url('../fonts/StempelGaramondLTStd-Italic.ttf') format('truetype');
+}
+
+/* RESET */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* BODY */
 body {
-   font-family: 'Pressura', monospace;
+    font-family: 'Pica', monospace;
     color: #3a3a3a;
-    background-color: #F7D1DC;
+    background-color: #D0CABE;
 }
 
-/* Layout */
+/* MAIN LAYOUT */
 .container {
     display: flex;
     flex-wrap: wrap;
-    padding: 40px;
+    padding: 20px;
 }
 
-/* Left column */
 .left-column {
     flex: 1 1 200px;
     padding: 20px;
 }
 
+/* TITLE */
+.name {
+    margin-bottom: 20px;
+}
+
 .name a {
-    font-family: 'Pressura', monospace;
     text-decoration: none;
     color: #3a3a3a;
     font-size: 24px;
+    font-family: 'Stempel', serif;
+    letter-spacing: -0.005em;
 }
 
+/* NAV */
 .nav-links {
-    margin-top: 20px;
     display: flex;
     flex-direction: column;
+    gap: 10px;
 }
 
-
 .nav-links a {
-    font-size: 16px;
-    font-family: 'Pressura', monospace;
-    font-weight: 400;
-    font-style: normal;
-    line-height: 1em;
-    text-transform: none;
-    color: #3a3a3a;
-    display: block;
-    margin-bottom: 10px;
     text-decoration: none;
+    color: #3a3a3a;
+    font-size: 16px;
 }
 
 .nav-links a:hover {
-    color: #efa6bb;
+    color: #807c74;
 }
 
-/* Right column */
 .right-column {
     flex: 2 1 600px;
-  padding: 20px;
+    padding: 20px;
+}
+
+/* IMAGE */
+.media-item {
+    width: 100%;
 }
 
 .media-item img {
     width: 100%;
-    max-width: 100%;
+    display: block;
+    mix-blend-mode: multiply;
+    filter: grayscale(30%);
+    transition: filter 0.3s ease;
 }
 
-
-@media (max-width: 800px) {
-    .left-column,
-    .right-column {
-        width: 100%;
-        padding: 10px;
-    }
-
-    .container {
-        padding: 20px;
-    }
-        .left-column {
-        margin-bottom: 30px;
-    }
+.media-item img:hover {
+    filter: grayscale(0);
 }
+
